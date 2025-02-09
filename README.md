@@ -70,10 +70,10 @@ The simplest way to get started is to use [Docker](https://www.docker.com/).
 git clone https://github.com/jdleesmiller/wedding.git
 cd wedding
 cp development.env.template development.env
-docker-compose build
-docker-compose up -d db
-docker-compose run --rm web bash -lc 'bin/rails db:create db:migrate'
-docker-compose run --rm web bash -lc 'bin/rails db:seed'
+docker compose build
+docker compose up -d db
+docker compose run --rm web bash -lc 'bin/rails db:create db:migrate'
+docker compose run --rm web bash -lc 'bin/rails db:seed'
 ```
 
 Watch the output of `db:seed` for the default admin credentials:
