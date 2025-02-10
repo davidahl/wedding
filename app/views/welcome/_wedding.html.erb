@@ -1,8 +1,8 @@
-<section id="welcome-index-when-where">
+<section id="welcome-index-wedding">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1>When &amp; Where</h1>
+        <h1>vigsel</h1>
       </div>
     </div>
     <div class="row">
@@ -11,21 +11,21 @@
           <%= render partial: 'calendar_svg' %>
         <%- end %></h2>
         <p>
-          <strong>12:30pm &ndash; late</strong><br>
+          <strong>15:30 &ndash; 16:00</strong><br>
           <%= t :wedding_date %><br>
           &nbsp;<br>
         </p>
         <p><%= link_to 'Add to Calendar', 'wedding.ics' %></p>
       </div>
       <div class="col-md-6 text-center">
-        <h2><%= link_to @google_maps_url do -%>
+        <h2><%= link_to @google_maps_url_vigsel do -%>
           <%= render partial: 'map_marker_svg' %>
         <%- end %></h2>
         <p>
           <%= render partial: 'wedding_address' %>
         </p>
         <p>
-          <%= link_to 'Google Maps', @google_maps_url %>
+          <%= link_to 'Google Maps', @google_maps_url_vigsel %>
         </p>
       </div>
     </div>
