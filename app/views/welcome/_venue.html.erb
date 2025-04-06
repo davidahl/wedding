@@ -2,8 +2,6 @@
   <div class="container">
     <h1>VIGSEL</h1>
   </div>
-</section>
-<section id="welcome-index-venue">
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-center">
@@ -11,22 +9,31 @@
           <%= render partial: 'calendar_svg' %>
         <%- end %></h2>
         <p>
-          <strong>15:30 &ndash; 16:00</strong><br>
+          <strong>16:30 &ndash; 17:00</strong><br>
           <%= t :wedding_date %><br>
           &nbsp;<br>
         </p>
         <p><%= link_to 'Add to Calendar', 'wedding.ics' %></p>
       </div>
       <div class="col-md-6 text-center">
-        <h2><%= link_to @google_maps_url_vigsel do -%>
+        <h2><%= link_to @google_maps_url_party do -%>
           <%= render partial: 'map_marker_svg' %>
         <%- end %></h2>
         <p>
           <%= render partial: 'wedding_address' %>
         </p>
         <p>
-          <%= link_to 'Google Maps', @google_maps_url_vigsel %>
+          <%= link_to 'Google Maps', @google_maps_url_party %>
         </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="welcome-index-wedding-plan">
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <p><strong>Efter vigseln går det buss från kyrkan till bröllopsfesten ca 16:00</p>
       </div>
     </div>
   </div>
