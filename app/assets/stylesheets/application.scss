@@ -33,6 +33,13 @@ $enable-rounded: false;
 @import "guests";
 @import "welcome";
 
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+  
+
 h1 {
   font-size: 60px;
   font-weight: 700;
