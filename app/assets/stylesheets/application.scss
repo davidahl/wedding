@@ -63,3 +63,18 @@ h2 {
 .wedding-required {
   color: theme-color("primary");
 }
+
+/* custom_styles.css */
+.image-container {
+  max-width: 50vh; /* Adjust the width of the container */
+  height: auto; /* Adjust the height of the container */
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the image horizontally */
+  padding: 2%;
+}
+
+.small-image {
+  max-width: 50%; /* Ensure the image fits within the container */
+  max-height: 50%; /* Ensure the image fits within the container */
+}
