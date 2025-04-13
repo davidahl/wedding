@@ -9,32 +9,33 @@
           <%= render partial: 'calendar_svg' %>
         <%- end %></h2>
         <p>
-          <strong>16:30 &ndash; 17:00</strong><br>
+          <strong>15:00 &ndash; 16:00</strong><br>
           <%= t :wedding_date %><br>
           &nbsp;<br>
         </p>
         <p><%= link_to 'Add to Calendar', 'wedding.ics' %></p>
       </div>
       <div class="col-md-6 text-center">
-        <h2><%= link_to @google_maps_url_party do -%>
+        <h2><%= link_to @google_maps_url_vigsel do -%>
           <%= render partial: 'map_marker_svg' %>
         <%- end %></h2>
         <p>
           <%= render partial: 'wedding_address' %>
         </p>
         <p>
-          <%= link_to 'Google Maps', @google_maps_url_party %>
+          <%= link_to 'Google Maps', @google_maps_url_vigsel %>
         </p>
       </div>
     </div>
   </div>
 </section>
 <section id="welcome-index-wedding-plan">
-  <div class="container">
-    <div class="row">
-      <div class="offset-md-3 col-md-6">
-        <p><strong>Efter vigseln går det buss från kyrkan till bröllopsfesten ca 16:00</p>
-      </div>
-    </div>
+<div class="container">
+  <div class="offset-md-3 col-md-6">
+    <p>Vigseln kommer att äga rum i Lomma Kyrka.</p>
+    <p>Vi kommer ordna transport med buss från Lund. 
+    Mer information varifrån bussen går kommer komma på denna sida inom kort. 
+    Det går också bra att ta sig till kyrkan med egen bil.</p>
   </div>
+</div>
 </section>
