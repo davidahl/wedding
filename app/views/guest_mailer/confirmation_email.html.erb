@@ -1,25 +1,30 @@
 <p><%= @guest.email_safe_salutation %></p>
 
 <% if @guest.attending %>
-<p>We look forward to seeing you!</p>
-<p>The address is:</p>
+<p>Vi är väldigt glada att du vill fira vårat bröllop med oss!</p>
+<p>Vigseln är kl 15:00 den 30:e Augusti i</p>
 <address><%= render partial: 'application/wedding_address' %></address>
 
-<h3>Your RSVP</h3>
-<p>If you would like to view or update your RSVP, you can use the following link to get back to it:</p>
+<h3>Din OSA</h3>
+<p>Behöver du ändra din OSA, gör det senast den 15:e Juli</p>
 <p><%= link_to guest_url(@guest), guest_url(@guest) %></p>
+<h4> Matpreferenser </h4>
+<p> <%= @guest.diet %> </p>
+<h4> Önskelåtar </h4>
+<p> <%= @guest.songs %> </p>
 
-<h3>Sending a Card?</h3>
-<p>If you need it, our mailing address is:</p>
-<address><%= render partial: 'application/mailing_address' %></address>
+<h3>Hålla tal?</h3>
+<p>Vill du hålla tal? Hör av dig till någon av våra Toastmasters: Elin eller Emil</p>
 
-<h3>Questions and answers</h3>
-<p>Please check <%= link_to 'our wedding website', root_url %> for more information, or you can reply to this email.</p>
+<h3>Information</h3>
+<p>På vår <%= link_to 'hemsida', root_url %> Finns all den information som ni behöver.</p>
+
 <% else %>
-<p>We're sorry to hear you can't make it. If you change your mind, you can update your RSVP with the link below:</p>
+<p>Tråkigt att du inte kan komma. Om du ändrar dina planer så kan du göra det via länken nedan:</p>
 <p><%= link_to guest_url(@guest), guest_url(@guest) %></p>
-<p>We hope to see you another time!</p>
+<p>Vi hoppas att vi ses en annan gång!</p>
 <% end %>
+
 
 <p>&nbsp;</p>
 <p><%= t :wedding_couple_names %></p>
