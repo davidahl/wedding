@@ -2,9 +2,9 @@
   <div class="row">
     <div class="offset-lg-2 col-lg-8">
       <%= render partial: 'leader' %>
-      <%= render partial: 'rsvp_nav', locals: { active: 3 } %>
+      <%= render partial: 'rsvp_nav', locals: { active: 2 } %>
 
-      <h2>Confirm</h2>
+      <h2>Bekräfta</h2>
 
       <%= form_with(model: @guest, url: complete_guest_path(@guest), local: true) do |form| %>
       <div class="row">
@@ -14,7 +14,7 @@
       </div>
 
       <% if @guest.attending? %>
-      <h3>Your Details</h3>
+      <h3>Dina Svar</h3>
       <div class="card mb-3">
         <h5 class="card-header"><%= @guest.name %></h5>
         <div class="card-body">
@@ -28,7 +28,7 @@
           </div>
           <div class="row">
             <div class="col-md-4">
-              Dietary Preferences
+              Matpreferenser
             </div>
             <div class="col-md-8">
               <% if @guest.diet.present? %>
@@ -40,7 +40,7 @@
           </div>
           <div class="row">
             <div class="col-md-4">
-              Song Suggestions
+              Låtförslag
             </div>
             <div class="col-md-8">
               <% if @guest.songs.present? %>
@@ -57,16 +57,9 @@
           </div>
         </div>
       </div>
-
-      <h3>Plus Ones</h3>
-      <% if @guest.plus_ones.any? %>
-        <%= render @guest.plus_ones %>
       <% else %>
-        <p>(None &mdash; just you.)</p>
-      <% end %>
-      <% else %>
-      <p>Sorry to hear you won't be joining us!</p>
-      <h3>Your Details</h3>
+      <p>Tråkigt att du inte kan komma!</p>
+      <h3>Dina svar</h3>
       <div class="card mb-3">
         <h5 class="card-header"><%= @guest.name %></h5>
         <div class="card-body">
@@ -82,14 +75,14 @@
       </div>
       <% end %>
 
-      <h3>Other Comments?</h3>
+      <h3>Övrigt</h3>
 
       <%= form.text_area :notes, class: 'form-control' %>
-      <small class="form-text text-muted">Anything else you'd like to let us know?</small>
+      <small class="form-text text-muted">Något annat du vill att vi ska veta?</small>
 
       <div class="row guests-buttons">
         <div class="offset-md-3 col-md-6 text-center">
-          <%= form.submit 'Complete RSVP', class: 'btn btn-primary', data: { disable_with: 'Sending...' } %>
+          <%= form.submit 'Färdigställ OSA', class: 'btn btn-primary', data: { disable_with: 'Sending...' } %>
         </div>
       </div>
       <% end %>

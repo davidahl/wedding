@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: wedding-web
+  name: wedding-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wedding-web
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: wedding-web
+    spec:
+      containers:
+      - image: davidaxelssonahl/wedding-web:latest
+        name: wedding-web
+        livenessProbe:
+          httpGet:
+            path: "/"
+            port: 3000
+        ports:
+        - containerPort: 3000
+        resources: {}
+status: {}
